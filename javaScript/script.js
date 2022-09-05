@@ -1,18 +1,11 @@
-function changeMode() 
+function changeMode(e) 
 {
     var body = document.body;
+    if (e.innerHTML === `<i class="fas fa-sun"></i>`){
+        e.innerHTML = `<i class="fas fa-moon"></i>`;
+    }
+    else{
+        e.innerHTML = `<i class="fas fa-sun"></i>`;
+    }
     body.classList.toggle("dark-mode");
 }
-
-// Scroll To Top
-
-const btnScrollToTop = document.querySelectorAll('#btn-scroll-to-top');
-
-
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 100) {
-        btnScrollToTop.classList.add("active")
-    } else {
-        btnScrollToTop.classList.remove("active")
-    }
-})
