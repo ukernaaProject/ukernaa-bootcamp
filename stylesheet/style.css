@@ -13,17 +13,24 @@
 /* Variables */
 :root
 {
-    --pri-color1 : #130047;
-    --pri-gradient : linear-gradient(#130047, #5C2A5F);
     --always-white : #ffffff;
     --background-color : #212121;
+
+    --pri-color1 : #130047;
+    --pri-color2 : #ED7D8F;
+    --pri-mid-gradient : #5C2A5F;
+    
     --sec-color1: #EF7895;
     --sec-color2: #E4A279;
+
+    --pri-gradient: linear-gradient(var(--pri-color1), var(--pri-color2));
+    --pri-half-gradient : linear-gradient(var(--pri-color1), var(--pri-mid-gradient));
+    --sec-gradient: linear-gradient(var(--sec-color1), var(--sec-color2));
 }
 
 /* Utility */
 .primary-btn{
-    background: linear-gradient(var(--sec-color1), var(--sec-color2));
+    background: var(--sec-gradient);
     padding: 8px 22px;
     color: var(--pri-color1);
     border-radius: 5px;
@@ -49,6 +56,7 @@ ul
 body
 {
     font-family: 'Poppins', sans-serif;
+    height: 500vh;
 }
 
 
@@ -132,7 +140,7 @@ h1
 
 .theme-switcher
 {
-    background: linear-gradient(var(--sec-color1), var(--sec-color2));
+    background: var(--sec-gradient);
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 700;
@@ -240,10 +248,10 @@ input:checked + .slider:before
 
 .hero-section
 {
-    background: var(--pri-gradient);
+    background: var(--pri-half-gradient);
     width: 100vw;
     height: 13em;
-    /* padding-top: 50px; */
+    box-shadow: 2px 2px 0px var(--pri-mid-gradient);
 }
 
 
