@@ -15,10 +15,12 @@
 {
     --pri-color1 : #130047;
     --pri-gradient : linear-gradient(#130047, #5C2A5F);
+    --alter-gradient : linear-gradient(#5C2A5F, #130047);
     --always-white : #ffffff;
     --background-color : #212121;
     --sec-color1: #EF7895;
     --sec-color2: #E4A279;
+    --sec-gradient : linear-gradient(#EF7895, #E4A279);
 }
 
 /* Utility */
@@ -28,6 +30,7 @@
     color: var(--pri-color1);
     border-radius: 5px;
     transition: all 0.3s;
+    border: none;
 }
 
 .primary-btn:hover
@@ -35,6 +38,18 @@
     color: white;
     border-radius: 12px;
     border-bottom: none;
+    border: none;
+}
+
+.submit-btn
+{
+    background: linear-gradient(var(--sec-color1), var(--sec-color2));
+    padding: 8px 22px;
+    color: var(--pri-color1);
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
 }
 
 
@@ -44,7 +59,10 @@ ul
     list-style: none;
 }
 
-
+button
+{
+    font-family: 'Poppins', sans-serif;
+}
 
 body
 {
@@ -299,4 +317,82 @@ input:checked + .slider:before
 .intro-card-paragraph
 {
     text-align: left;
+}
+
+/* Registration Tab */
+
+.register-tab
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-cards
+{
+    color: #ffffff;
+    margin-top: 30px;
+    width: 500px;
+    height: 400px;
+    background: var(--alter-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.register-header
+{
+    width: 100%;
+    border-bottom: 1px solid var(--sec-color2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+
+
+label
+{
+    padding-top: 0 15px;
+}
+
+.main-content-register form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form .register-text
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 30px 0;
+}
+
+.register-text input
+{
+    
+}
+
+input
+{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+span a
+{
+    text-decoration: none;
+    color: linear-gradient(var(--sec-color1), var(--sec-color2));
+}
+
+span a:hover
+{
+    color: var(--sec-color1);
 }
