@@ -7,24 +7,18 @@
 {
     padding: 0;
     margin: 0;
+    user-select: none;
 }
 
 /* Variables */
 :root
 {
     --pri-color1 : #130047;
-    --headingTextColor : #2f4f84;
-    --lightBackgroundColor : #ededed;
-    --BackgroundColor : #212121;
-    --navBarColor : rgba(7, 14, 18,0.7);
-    --darkHeadingTextColor : #1c62d6;
-    --darkMode : #e02a52;
-    --miniOrange : #f0593a;
-    --ukernaa :plum;
-    --hover : rgba(224, 42, 82,0.5);
+    --pri-gradient : linear-gradient(#130047, #5C2A5F);
+    --always-white : #ffffff;
+    --background-color : #212121;
     --sec-color1: #EF7895;
     --sec-color2: #E4A279;
-    --secondaryColor2: #90d4d7;
 }
 
 /* Utility */
@@ -58,6 +52,11 @@ body
 }
 
 
+h1
+{
+    font-size: 2.3rem;
+}
+
 /* ----------- Navbar ------------ */
 
 .navbar
@@ -65,7 +64,7 @@ body
     position: fixed;
     top: 0;
     width: 100%;
-    background: var(--pri-color1);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +86,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .navbar #left #logo #brand
@@ -108,7 +107,7 @@ body
     align-items: center;
     justify-content: center;
     margin: 0px 10px;
-
+    
 }
 
 .navbar #right ul li{
@@ -118,7 +117,7 @@ body
 .navbar #right ul a{
     color: white;
     text-decoration: none;
-
+    
 }
 
 .navbar #right ul a:hover
@@ -146,6 +145,7 @@ body
     align-items: center;
     height: 35px;
     width: 35px;
+    display: none;
 }
 
 
@@ -225,11 +225,78 @@ input:checked + .slider:before
 }
 .dark-mode
 {
-    background: var(--BackgroundColor);
+    background: var(--background-color);
     color: var(--lightBackgroundColor);
 }
 ::selection
 {
     background: var(--darkHeadingTextColor);
     color: var(--lightBackgroundColor);
+}
+
+
+
+/* ----------- Hero Section ------------ */
+
+.hero-section
+{
+    background: var(--pri-gradient);
+    width: 100vw;
+    height: 13em;
+    /* padding-top: 50px; */
+}
+
+
+.hero-main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    
+}
+.hero-main
+{
+    color: var(--always-white);
+}
+
+#hero-logo
+{
+    width: 500px;
+}
+
+
+
+
+
+/* ------------- Intro Section ------------ */
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intro-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16em;
+}
+
+.intro-card img{
+    height: 10em;
+}
+
+.intro-card-text
+{
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.intro-card-paragraph
+{
+    text-align: left;
 }
