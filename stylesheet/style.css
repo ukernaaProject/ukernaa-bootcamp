@@ -80,6 +80,7 @@ h1
     align-items: center;
     transition: 0.5s;
     padding: 5px 10px;
+    z-index: 10;
 }
 
 
@@ -290,10 +291,35 @@ input:checked + .slider:before
 }
 
 .intro-card{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 16em;
+    z-index: -1;
+}
+
+#card1{
+    bottom: 14em;
+    left: 31em;
+}
+
+#card2{
+    right: 16em;
+}
+
+#card3{
+    left: 30em;
+}
+
+#card4{
+    top: 33em;
+    right: 35em;
+}
+
+#card5{
+    top: 32em;
+    right: 17em;
 }
 
 .intro-card img{
