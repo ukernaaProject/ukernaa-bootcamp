@@ -16,16 +16,9 @@
     --pri-color1 : #130047;
     --pri-gradient : linear-gradient(#130047, #5C2A5F);
     --always-white : #ffffff;
-    --BackgroundColor : #212121;
-    --navBarColor : rgba(7, 14, 18,0.7);
-    --darkHeadingTextColor : #1c62d6;
-    --darkMode : #e02a52;
-    --miniOrange : #f0593a;
-    --ukernaa :plum;
-    --hover : rgba(224, 42, 82,0.5);
+    --background-color : #212121;
     --sec-color1: #EF7895;
     --sec-color2: #E4A279;
-    --secondaryColor2: #90d4d7;
 }
 
 /* Utility */
@@ -152,6 +145,7 @@ h1
     align-items: center;
     height: 35px;
     width: 35px;
+    display: none;
 }
 
 
@@ -231,7 +225,7 @@ input:checked + .slider:before
 }
 .dark-mode
 {
-    background: var(--BackgroundColor);
+    background: var(--background-color);
     color: var(--lightBackgroundColor);
 }
 ::selection
@@ -282,4 +276,27 @@ input:checked + .slider:before
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.intro-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 16em;
+}
+
+.intro-card img{
+    height: 10em;
+}
+
+.intro-card-text
+{
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.intro-card-paragraph
+{
+    text-align: left;
 }
