@@ -428,3 +428,18 @@ span a:hover
 {
     color: var(--sec-color1);
 }
+
+/* Telegram Channel Button */
+
+.telegram-btn
+{
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(#37aee2, #1e96c8);
+    padding: 20px;
+}
+
+.telegram-logo
+{
+    padding-top: 3px;
+}
