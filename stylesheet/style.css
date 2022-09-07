@@ -68,6 +68,11 @@
     border-radius: 15px;
 }
 
+.footer-btn
+{
+    padding: 4px 10px;
+}
+
 /* Tags */
 ul
 {
@@ -79,7 +84,7 @@ ul
 body
 {
     font-family: 'Poppins', sans-serif;
-    height: 500vh;
+    /* height: 500vh; */
 }
 
 
@@ -515,4 +520,150 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     transition: all ease-in-out 0.5s ;
+}
+
+
+/* Footer */
+
+footer
+{
+    width: 100%;
+    background: #130047;
+    color: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.footer-top img
+{
+    padding-top: 12px;
+    width: 240px;
+}
+
+.footer-top
+{
+    padding: 20px 20px;
+
+}
+
+.footer-middle
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+
+.footer-links-left
+{
+    text-align: center;
+    padding-left: 20px;
+}
+.footer-links-middle
+{
+    text-align: center;
+}
+.footer-links-right
+{
+    text-align: center;
+    gap: 30px;
+
+}
+
+.footer-links-right .links
+{
+    display: flex;
+    gap: 23px;
+}
+
+
+
+.footer-middle .footer-links-left a
+{
+    color: #fff;
+    padding-top: 7px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+.footer-middle .footer-links-middle a
+{
+    padding-top: 7px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.footer-middle .footer-links-right a
+{
+    padding-top: 7px;
+    display: flex;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.footer-middle .footer-links-left a:hover
+{
+    color: var(--sec-color1);
+}
+.footer-middle .footer-links-middle a:hover
+{
+    color: var(--sec-color1);
+}
+.footer-middle .footer-links-right a:hover
+{
+    color: var(--sec-color1);
+}
+
+textarea
+{
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    resize: none;
+}
+textarea:focus
+{
+    font-style: italic;
+}
+
+.footer-contact form
+{
+    width: 500px;
+    padding-right: 20px;
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-contact form .footer-input
+{
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0px 15px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.links .fa-brands
+{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.foot-bottom
+{
+    width: 100%;
+    display: flex;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    background: #130047;
 }
