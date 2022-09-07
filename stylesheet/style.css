@@ -1,5 +1,6 @@
 /* ------- Font Import --------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 /* ------- Global CSS --------- */
 
@@ -17,7 +18,6 @@
 {
     --always-white : #ffffff;
     --background-color : #212121;
-    --sec-gradient : linear-gradient(#EF7895, #E4A279);
     --alter-gradient : linear-gradient(#5C2A5F, #130047);
     --pri-color1 : #130047;
     --pri-color2 : #ED7D8F;
@@ -27,7 +27,9 @@
     --sec-color2: #E4A279;
 
     --pri-gradient: linear-gradient(var(--pri-color1), var(--pri-color2));
+    --reverse-pri-grad: linear-gradient(var(--pri-color2), var(--pri-color1));
     --pri-half-gradient : linear-gradient(var(--pri-color1), var(--pri-mid-gradient));
+    --pri-half-grad-reverse : linear-gradient(var(--pri-mid-gradient), var(--pri-color1));
     --sec-gradient: linear-gradient(var(--sec-color1), var(--sec-color2));
 }
 
@@ -51,8 +53,12 @@
 {
     background: var(--sec-gradient);
     padding: 8px 22px;
+    margin: 20px 0px;
     color: var(--pri-color1);
+    font-family: 'Poppins', sans-serif;
     border-radius: 5px;
+    font-size: 1.0rem;
+    font-weight: 500;
     transition: all 0.3s;
     border: none;
     cursor: pointer;
@@ -60,6 +66,11 @@
 .submit-btn:hover
 {
     border-radius: 15px;
+}
+
+.footer-btn
+{
+    padding: 4px 10px;
 }
 
 /* Tags */
@@ -73,7 +84,7 @@ ul
 body
 {
     font-family: 'Poppins', sans-serif;
-    height: 500vh;
+    /* height: 500vh; */
 }
 
 
@@ -148,7 +159,7 @@ h1
 
 .navbar #right ul a:hover
 {
-    border-bottom: 1px solid var(--sec-color1);
+    border-bottom: 1.8px solid var(--sec-color2);
 }
 
 .navbar #right .primary-btn{
@@ -298,11 +309,12 @@ input:checked + .slider:before
 
 /* ------------- Intro Section ------------ */
 
-.intro{
+.intro {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
+    height: 60em;
 }
 
 .intro-card{
@@ -315,16 +327,16 @@ input:checked + .slider:before
 }
 
 #card1{
-    bottom: 14em;
+    bottom: 11em;
     left: 31em;
 }
 
 #card2{
-    right: 16em;
+    right: 12em;
 }
 
 #card3{
-    left: 30em;
+    left: 27em;
 }
 
 #card4{
@@ -354,33 +366,27 @@ input:checked + .slider:before
 
 
 
-/* Registration Tab */
+/* --------- Registration Tab --------- */
+
+.inverted-wave{
+    box-shadow: 0px 15px 0px var(--pri-mid-gradient);
+}
 
 .register-tab
 {
+    background: var(--pri-half-grad-reverse);
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.register-cards
-{
-    color: #ffffff;
-    margin-top: 30px;
-    width: 500px;
-    height: 400px;
-    background: var(--alter-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
 }
 
 .register-header
 {
     width: 100%;
-    border-bottom: 1px solid var(--sec-color2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,42 +395,275 @@ input:checked + .slider:before
 }
 
 
-label
-{
-    padding-top: 0 15px;
-}
-
-.main-content-register form
+.register-tab form
 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 50%;
+}
+.register-text
+{
+    width: 80%;
 }
 
-form .register-text
-{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 30px 0;
-}
-
-
-
-input
-{
+.register-tab form input {
     width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0px 15px 0px;
     font-family: 'Poppins', sans-serif;
 }
 
-span a
+input:focus
 {
-    text-decoration: none;
-    color: linear-gradient(var(--sec-color1), var(--sec-color2));
+    outline: none;
+    font-style: italic;
 }
 
-span a:hover
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.register-tab label
+{
+    padding-top: 0 15px;
+}
+
+.register-tab span
+{
+    font-size: 1.2rem;
+}
+
+.register-tab span a
+{
+    color: #EF7895;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.4s;
+}
+.register-tab span a:hover
+{
+    color: #a25367;
+}
+
+/* Telegram Channel Button */
+
+.telegram-banner{
+    margin: 20px auto;
+    display: flex;
+    height: 400px;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px;
+    background: url("../assets/Telegram-bg.png") no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+.telegram-banner .tele-card img{
+    height: 70px;
+}
+
+.telegram-banner .tele-card h2{
+    margin: 15px auto;
+}
+
+.telegram-btn
+{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #1c93e3;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 650;
+}
+
+.telegram-btn:hover
+{
+    border-radius: 30px;
+    background: #14669c;
+}
+
+.telegram-banner i{
+    color: white;
+}
+
+.telegram-logo
+{
+    padding-top: 3px;
+}
+
+.tele-card
+{
+    color: white;
+    height: 350px;
+    width: 500px;
+    background: #14669c89;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.5s ;
+}
+
+
+/* Footer */
+
+footer
+{
+    width: 100%;
+    background: #130047;
+    color: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.footer-top img
+{
+    padding-top: 12px;
+    width: 240px;
+}
+
+.footer-top
+{
+    padding: 20px 20px;
+
+}
+
+.footer-middle
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+
+
+.footer-links-left
+{
+    text-align: center;
+    padding-left: 20px;
+}
+.footer-links-middle
+{
+    text-align: center;
+}
+.footer-links-right
+{
+    text-align: center;
+    gap: 30px;
+
+}
+
+.footer-links-right .links
+{
+    display: flex;
+    gap: 23px;
+}
+
+
+
+.footer-middle .footer-links-left a
+{
+    color: #fff;
+    padding-top: 7px;
+    text-decoration: none;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+.footer-middle .footer-links-middle a
+{
+    padding-top: 7px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.footer-middle .footer-links-right a
+{
+    padding-top: 7px;
+    display: flex;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.footer-middle .footer-links-left a:hover
 {
     color: var(--sec-color1);
+}
+.footer-middle .footer-links-middle a:hover
+{
+    color: var(--sec-color1);
+}
+.footer-middle .footer-links-right a:hover
+{
+    color: var(--sec-color1);
+}
+
+textarea
+{
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    resize: none;
+}
+textarea:focus
+{
+    font-style: italic;
+}
+
+.footer-contact form
+{
+    width: 500px;
+    padding-right: 20px;
+    display: flex;
+    gap: 13px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-contact form .footer-input
+{
+    width: 100%;
+    padding: 9px 10px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0px 15px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.links .fa-brands
+{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.foot-bottom
+{
+    width: 100%;
+    display: flex;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    background: #130047;
 }
