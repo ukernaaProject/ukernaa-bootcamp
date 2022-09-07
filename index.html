@@ -45,7 +45,7 @@
                         <a href="#">Syllabus</a>
                     </li>
                     <li>
-                        <a href="#" class="primary-btn">Register</a>
+                        <a href="#register" class="primary-btn">Register</a>
                     </li>
                     <button class="theme-switcher" onclick="changeMode(this)">
                     <i class="fas fa-moon"></i>
@@ -115,28 +115,31 @@
     </section>
     <!-- Intro Section Ends -->
 
-    <section class="register-tab" id="#Register">
-        <div class="register-cards">
-                <h1 class="register-header">
-                    Register
-                </h1>
-            <div class="main-content-register">
-                <form action="https://docs.google.com/forms/u/8/d/e/1FAIpQLSdVz4-rewHq2PN8SOmUFpWDiOe47iGN4nCWApgH4P9DTmm3Sg/formResponse" method="post">
-                    <div class="register-text">
-                        <label>Name</label>
-                        <input type="text" name="entry.232005666" placeholder="Your Name" required>
-                    </div>
-                    <div class="register-text">
-                        <label>Email</label>
-                        <input type="text" name="entry.2058990258" placeholder="Your E-Mail" required>
-                    </div>
-                    <button class="submit-btn" type="submit" target="_blank">Submit</button><br>
-                </form>
+    <img class="inverted-wave" id="register" src="./assets/wave-inverted.svg" alt="Inverted-Waves">
+    <section class="register-tab">
+        <h1 class="register-header">
+            Register
+        </h1>
+        <form action="https://docs.google.com/forms/u/8/d/e/1FAIpQLSdVz4-rewHq2PN8SOmUFpWDiOe47iGN4nCWApgH4P9DTmm3Sg/formResponse" method="post">
+
+            <div class="register-text">
+                <label>Name</label>
+                <input type="text" name="entry.232005666" placeholder="Your Name" required>
             </div>
-            <span>
-                Click <a href="https://forms.gle/DgadmxPHZ4wvUnLh8" target="_blank">here</a> to complete the Form in Google Forms.
-            </span>
-        </div>
+            
+            <div class="register-text">
+                <label>Email</label>
+                <input type="email" name="entry.2058990258" placeholder="Your E-Mail" required>
+            </div>
+            <div class="register-text">
+                <label>Phone Number</label>
+                <input type="number" name="entry.1614404256" placeholder="Phone Number">
+            </div>
+            <button class="submit-btn" type="submit" target="_blank">Submit</button>
+        </form>
+        <span>
+            Click <a href="https://forms.gle/DgadmxPHZ4wvUnLh8" target="_blank">here</a> to complete the Form in Google Forms.
+        </span>
     </section>
 
     <section>
@@ -144,7 +147,7 @@
             For The Latest Updates :
         </h2> -->
         <a class="telegram-btn" href="https://t.me/ukernaa" target="_blank">
-            Join our Telegram Channel
+            JOIN OUR TELEGRAM CHANNEL
         </a>
     </section>
 
