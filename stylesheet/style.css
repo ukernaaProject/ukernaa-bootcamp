@@ -154,7 +154,7 @@ h1
 
 .navbar #right ul a:hover
 {
-    border-bottom: 1px solid var(--sec-color1);
+    border-bottom: 1.8px solid var(--sec-color2);
 }
 
 .navbar #right .primary-btn{
@@ -376,7 +376,7 @@ input:checked + .slider:before
     color: #fff;
     justify-content: center;
     width: 100%;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
 }
 
 .register-header
@@ -418,12 +418,17 @@ input:focus
     font-style: italic;
 }
 
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 .register-tab label
 {
@@ -438,7 +443,9 @@ input::-webkit-inner-spin-button {
 .register-tab span a
 {
     color: #EF7895;
+    text-decoration: none;
     font-weight: 700;
+    transition: all 0.4s;
 }
 .register-tab span a:hover
 {
@@ -447,8 +454,30 @@ input::-webkit-inner-spin-button {
 
 /* Telegram Channel Button */
 
+.telegram-banner{
+    margin: 20px auto;
+    display: flex;
+    height: 400px;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px;
+    background: url("../assets/Telegram-bg.png") no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+.telegram-banner .tele-card img{
+    height: 70px;
+}
+
+.telegram-banner .tele-card h2{
+    margin: 15px auto;
+}
+
 .telegram-btn
 {
+    text-align: center;
     text-decoration: none;
     color: #fff;
     background: #1c93e3;
@@ -465,7 +494,25 @@ input::-webkit-inner-spin-button {
     background: #14669c;
 }
 
+.telegram-banner i{
+    color: white;
+}
+
 .telegram-logo
 {
     padding-top: 3px;
+}
+
+.tele-card
+{
+    color: white;
+    height: 350px;
+    width: 500px;
+    background: #14669c89;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.5s ;
 }
