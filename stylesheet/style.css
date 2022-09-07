@@ -395,17 +395,26 @@ input:checked + .slider:before
 }
 
 
-.register-tab form
+.register-tab form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.register-tab form .form-fields
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 50%;
+    flex-wrap: wrap;
+    width: 90%;
 }
-.register-text
-{
-    width: 80%;
+
+.register-text {
+	width: 35%;
+	margin: 5px 28px;
 }
 
 .register-tab form input {
@@ -520,10 +529,11 @@ input[type=number] {
     align-items: center;
     justify-content: center;
     transition: all ease-in-out 0.5s ;
+    padding: 3em;
 }
 
 
-/* Footer */
+/* ------------------------ Footer --------------- */
 
 footer
 {
