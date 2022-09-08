@@ -535,16 +535,19 @@ input[type=number] {
 
 /* ------------------------ Footer --------------- */
 
+/* Base */
 footer
 {
     width: 100%;
     background: #130047;
     color: #fff;
     border-radius: 50px 50px 0px 0px;
-    padding: 20px;
+    padding: 20px 8em;
     margin-top: 8em;
 }
 
+
+/* Top of Footer */
 .footer-top img
 {
     padding-top: 12px;
@@ -557,6 +560,10 @@ footer
 
 }
 
+
+
+
+/* Body of Footer */
 .footer-middle
 {
     display: flex;
@@ -568,17 +575,102 @@ footer
 }
 
 
+
+
+/* Common */
+.footer-middle .footer-body-left a, 
+.footer-middle .footer-body-center a,
+.footer-middle .footer-body-right a
+{
+    padding-top: 7px;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle .footer-body-left a:hover, 
+.footer-middle .footer-body-center a:hover,
+.footer-middle .footer-body-right a:hover
+{
+    color: var(--sec-color1);
+}
+
+
+
+
+/* Left */
 .footer-body-left
 {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding-left: 20px;
 }
-.footer-body-middle
-{
 
+
+
+
+/* Center */
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links .fa-brands
+{
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.footer-middle .footer-body-center .links a{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
     text-align: center;
 }
 
+.footer-middle .footer-body-center .links a:hover{
+    opacity: 0.7;
+}
+
+.links .links-top, .links .links-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+.fa-instagram {
+background: #dd19af;
+color: white;
+}
+
+.fa-reddit {
+background: #ff5700;
+color: white;
+}
+
+.fa-github, .fa-medium{
+    background-color: black;
+    color: white;
+}
+
+
+/* Right */
 .footer-body-right form
 {
     display: flex;
@@ -601,65 +693,7 @@ footer
     width: 30%;
 }
 
-.footer-body-right .links
-{
-    display: flex;
-    gap: 23px;
-}
 
-
-
-.footer-middle .footer-body-left a
-{
-    color: #fff;
-    padding-top: 7px;
-    text-decoration: none;
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-}
-.footer-middle .footer-body-middle a
-{
-    padding-top: 7px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-}
-.footer-middle .footer-body-right a
-{
-    padding-top: 7px;
-    display: flex;
-    text-align: left;
-    color: #fff;
-    text-decoration: none;
-}
-
-
-
-.footer-middle .footer-body-left a:hover
-{
-    color: var(--sec-color1);
-}
-.footer-middle .footer-body-middle a:hover
-{
-    color: var(--sec-color1);
-}
-.footer-middle .footer-body-right a:hover
-{
-    color: var(--sec-color1);
-}
-
-textarea
-{
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    resize: none;
-}
-textarea:focus
-{
-    font-style: italic;
-}
 
 .footer-contact form
 {
@@ -682,12 +716,21 @@ textarea:focus
     font-family: 'Poppins', sans-serif;
 }
 
-.links .fa-brands
+textarea
 {
-    padding-top: 5px;
-    padding-right: 5px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    resize: none;
+}
+textarea:focus
+{
+    font-style: italic;
 }
 
+
+
+
+/* Bottom of Footer */
 .foot-bottom
 {
     width: 100%;
