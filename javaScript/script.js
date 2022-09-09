@@ -38,6 +38,25 @@ function scrollFunction() {
     logo.classList.remove("animate-logo");
     logo.classList.add("animate-logo-reverse");
   }
-
-  
 }
+
+// -------- Accordion --------
+
+const accordionItemHeaders = document.querySelectorAll(".syllabus-item-header")
+
+accordionItemHeaders.forEach(accordionItemHeaders =>{
+  accordionItemHeaders.addEventListener("click", event =>{
+    accordionItemHeaders.classList.toggle("active")
+    const accordonItemBody = accordionItemHeaders.nextElementSibling
+    if(accordionItemHeaders.classList.contains('active'))
+    {
+      accordonItemBody.style.maxHeight = accordonItemBody.scrollHeight + "px"
+    }
+    else
+    {
+      accordonItemBody.style.maxHeight = 0
+    }
+  })
+})
+
+
