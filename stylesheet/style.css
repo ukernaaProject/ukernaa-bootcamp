@@ -543,6 +543,156 @@ input[type=number] {
     transition: all ease-in-out 0.5s ;
     padding: 3em;
 }
+.bmc-banner{
+    margin: 20px auto;
+    display: flex;
+    height: 400px;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px;
+    background: url("https://cdn.pixabay.com/photo/2017/10/13/15/29/coffee-2847957_1280.jpg") no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+.bmc-banner .bmc-card img{
+    height: 70px;
+}
+
+.bmc-banner .bmc-card h2{
+    margin: 15px auto;
+}
+
+.bmc-logo
+{
+    width: 60px;
+}
+
+.bmc-btn
+{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #0D0C22;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 650;
+}
+
+.bmc-btn:hover
+{
+    border-radius: 30px;
+    background: #FFDD00;
+    color: #0D0C22;
+}
+
+.bmc-btn-text
+{
+    width: 270px;
+}
+
+.bmc-banner i{
+    color: white;
+}
+
+.bmc-logo
+{
+    padding-top: 3px;
+}
+
+.bmc-card
+{
+    color: white;
+    height: 350px;
+    width: 500px;
+    background: #ffdd009f;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.5s ;
+    padding: 3em;
+}
+
+
+.patreon-banner{
+    margin: 20px auto;
+    display: flex;
+    height: 400px;
+    width: 95%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 10px;
+    background: url("https://cdn.pixabay.com/photo/2018/04/03/23/24/composition-3288397_1280.jpg") no-repeat center center/cover;
+    border-radius: 15px;
+}
+
+.patreon-banner .patreon-card img{
+    height: 70px;
+}
+
+.patreon-banner .patreon-card h2{
+    margin: 15px auto;
+}
+
+.patreon-logo
+{
+    width: 60px;
+}
+
+.patreon-btn
+{
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #0D0C22;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 650;
+}
+
+.patreon-btn:hover
+{
+    border-radius: 30px;
+    background: #f96854;
+    color: #0D0C22;
+}
+
+.patreon-btn-text
+{
+    width: 270px;
+}
+
+.patreon-banner i{
+    color: white;
+}
+
+.patreon-logo
+{
+    padding-top: 3px;
+}
+
+.patreon-card
+{
+    color: white;
+    height: 350px;
+    width: 500px;
+    background: #f967547c;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.5s ;
+    padding: 3em;
+}
 
 
 /* ------------------------ Footer --------------- */
