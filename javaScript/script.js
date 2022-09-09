@@ -17,13 +17,27 @@ function changeMode(e)
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+
+  let logo =  document.getElementById("brand-logo");
+
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navigation").style.background = "#130047";
-    document.getElementById("brand-logo").innerHTML = `<img id="brand" src="./assets/FusionTechClub.svg" alt="Logo">
+
+    logo.innerHTML = `<img id="brand" src="./assets/FusionTechClub.svg" alt="Logo">
     <span id="brand-text">Fusion Tech Club</span>`
+
+    logo.classList.remove("animate-logo-reverse");
+    logo.classList.add("animate-logo");
+    
   } else {
     document.getElementById("navigation").style.background = "transparent";
-    document.getElementById("brand-logo").innerHTML = `<img id="brand" src="./assets/UkernaaLogo.svg" alt="Logo">
+    
+    logo.innerHTML = `<img id="brand" src="./assets/UkernaaLogo.svg" alt="Logo">
     <img id="brand-text" src="./assets/ukernaa_text_logo.svg" alt="Logo">`
+
+    logo.classList.remove("animate-logo");
+    logo.classList.add("animate-logo-reverse");
   }
+
+  
 }
