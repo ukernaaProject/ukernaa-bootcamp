@@ -79,10 +79,10 @@
 }
 
 /* Tags */
-ul
+/* ul
 {
     list-style: none;
-}
+} */
 
 
 
@@ -152,6 +152,7 @@ h1
 
 .navbar #right #tabs ul
 {
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,21 +377,48 @@ input:checked + .slider:before
     text-align: center;
 }
 
+/* About Tab */
 
+#about
+{
+    padding: 13px;
+    background: var(--pri-half-grad-reverse);
+}
+
+.about
+{
+    color: #fff;
+    margin: 1.6rem;
+}
+
+.about h1
+{
+    text-align: center;
+}
+
+.about p
+{
+    padding-left: 12px;
+}
+p ul
+{
+    list-style: disc;
+
+}
 
 /* --------- Registration Tab --------- */
 
 .inverted-wave{
-    box-shadow: 0px 15px 0px var(--pri-mid-gradient);
+    box-shadow: 0px 7px 0px var(--pri-mid-gradient);
 }
 
 .register-tab
 {
     background: var(--pri-half-grad-reverse);
     display: flex;
+    color: #fff;
     flex-direction: column;
     align-items: center;
-    color: #fff;
     justify-content: center;
     width: 100%;
     padding-bottom: 10px;
@@ -716,7 +744,7 @@ input[type=number] {
 
 .syllabus-item
 {
-    background: linear-gradient(to right,#ed7d9036, #e4a2793e,#13004717);
+    background: linear-gradient(to right,#e4a27926,#ed7d9021,#13004717);
     margin: 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);

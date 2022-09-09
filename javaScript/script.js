@@ -29,6 +29,18 @@ function scrollFunction() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // -------- Accordion --------
 
 const accordionItemHeaders = document.querySelectorAll(".syllabus-item-header")
