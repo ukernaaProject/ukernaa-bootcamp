@@ -1,6 +1,11 @@
 /* ------- Font Import --------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: Majesty-FTC;
+    src: url(../assets/Majesty_Regular.ttf);
+}
 
 /* ------- Global CSS --------- */
 
@@ -121,9 +126,13 @@ h1
 .navbar #left #logo a
 {
     display: flex;
+    font-family: 'Majesty-FTC', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    transition: all 0.5s;
     justify-content: center;
     align-items: center;
-    
+    text-decoration: none;
 }
 
 .navbar #left #logo #brand
@@ -135,6 +144,9 @@ h1
 .navbar #left #brand-text{
     padding-left: 10px;
     height: 30px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 
@@ -361,7 +373,7 @@ input:checked + .slider:before
 
 .intro-card-paragraph
 {
-    text-align: left;
+    text-align: center;
 }
 
 
