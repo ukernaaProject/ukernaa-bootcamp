@@ -79,10 +79,10 @@
 }
 
 /* Tags */
-/* ul
+ul
 {
-    list-style: none;
-} */
+    padding-left: 43px;
+}
 
 
 
@@ -438,9 +438,10 @@ input:checked + .slider:before
 {
     padding-left: 12px;
 }
-p ul
+.about p ul
 {
-    list-style: disc;
+    /* list-style: disc; */
+    padding-left: 23px;
 
 }
 
@@ -450,9 +451,14 @@ p ul
     box-shadow: 0px 7px 0px var(--pri-mid-gradient);
 }
 
+#register
+{
+    height: 80px;
+}
+
 .register-tab
 {
-    background: var(--pri-half-grad-reverse);
+    background: var(--pri-half-gradient);
     display: flex;
     color: #fff;
     flex-direction: column;
@@ -469,7 +475,7 @@ p ul
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 0 20px 0;
+    padding: 15px 0 20px 0;
 }
 
 
@@ -541,7 +547,7 @@ input[type=number] {
 }
 .register-tab span a:hover
 {
-    color: #a25367;
+    color: #ef789693;
 }
 
 /* Telegram Channel Button */
