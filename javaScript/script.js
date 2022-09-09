@@ -27,3 +27,23 @@ function scrollFunction() {
     <img id="brand-text" src="./assets/ukernaa_text_logo.svg" alt="Logo">`
   }
 }
+
+
+// -------- Accordion --------
+
+const accordionItemHeaders = document.querySelectorAll(".syllabus-item-header")
+
+accordionItemHeaders.forEach(accordionItemHeaders =>{
+  accordionItemHeaders.addEventListener("click", event =>{
+    accordionItemHeaders.classList.toggle("active")
+    const accordonItemBody = accordionItemHeaders.nextElementSibling
+    if(accordionItemHeaders.classList.contains('active'))
+    {
+      accordonItemBody.style.maxHeight = accordonItemBody.scrollHeight + "px"
+    }
+    else
+    {
+      accordonItemBody.style.maxHeight = 0
+    }
+  })
+})
