@@ -14,6 +14,8 @@ function changeMode(e)
 
 // -------- onScroll ----------
 
+scrollFunction();
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -31,7 +33,7 @@ function scrollFunction() {
     
   } else {
     document.getElementById("navigation").style.background = "transparent";
-    
+
     logo.innerHTML = `<img id="brand" src="./assets/UkernaaLogo.svg" alt="Logo">
     <img id="brand-text" src="./assets/ukernaa_text_logo.svg" alt="Logo">`
 
