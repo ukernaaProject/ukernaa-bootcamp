@@ -1061,3 +1061,45 @@ textarea:focus
     background: #130047;
     padding: 15px;
 }
+
+/* Responsive Design */
+
+@media only screen and (max-width: 600px)
+{
+    .hero-section
+    {
+        width: 215vw;
+    }
+
+    .waves
+    {
+        width: 215vw;
+    }
+
+    #about
+    {
+        width: 215vw;
+    }
+
+    .about
+    {
+        width: 200vw;
+        margin: 1.3rem;
+    }
+
+    .about h1
+    {
+        text-align: center;
+    }
+
+    .about p
+    {
+        padding-left: 9px;
+    }
+    .about p ul
+    {
+        /* list-style: disc; */
+        padding-left: 13px;
+    }
+
+}
