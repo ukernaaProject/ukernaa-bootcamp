@@ -42,6 +42,29 @@ function scrollFunction() {
   }
 }
 
+
+
+
+// ---------------- Sidebar ----------------
+
+const sidebar = document.getElementById("sidebar");
+
+function showSidebar() {
+  sidebar.classList.remove("sidebar-hide");
+  sidebar.classList.add("sidebar-show");
+}
+
+
+function hideSidebar() {
+  sidebar.classList.remove("sidebar-show");
+  sidebar.classList.add("sidebar-hide");
+}
+
+
+
+
+
+
 // -------- Accordion --------
 
 const accordionItemHeaders = document.querySelectorAll(".syllabus-item-header")
@@ -60,5 +83,6 @@ accordionItemHeaders.forEach(accordionItemHeaders =>{
     }
   })
 })
+
 
 

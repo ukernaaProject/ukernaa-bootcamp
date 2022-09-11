@@ -98,7 +98,7 @@ body
 
 ul
 {
-    padding-left: 43px;
+    /* padding-left: 43px; */
 }
 
 
@@ -123,7 +123,7 @@ h1
 {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -141,6 +141,19 @@ h1
     align-items: center;
     justify-content: center;
     margin: 0px 15px;
+}
+
+.navbar #left #ham-icon{
+    display: none;
+    color: white;
+    font-size: 25px;
+    margin: 0px 15px;
+}
+
+.navbar #left #ham-icon:hover{
+    cursor: pointer;
+    outline: none;
+    user-select: none;
 }
 
 
@@ -347,6 +360,124 @@ input:checked + .slider:before
     background: var(--darkHeadingTextColor);
     color: var(--lightBackgroundColor);
 }
+
+
+
+
+/* Navbar Media Queries */
+
+@media (max-width: 1118px) {
+    .navbar #right #tabs ul {
+        margin: 0px 0px;
+    }
+
+    .navbar #right ul li {
+        margin: 0px 15px;
+    }
+}
+
+
+@media (max-width: 970px) {
+    
+    .navbar #left #ham-icon {
+        display: inline;
+    }
+    
+    .navbar #tabs{
+        display: none;
+    }
+}
+
+
+
+
+
+/* ------------------ Sidebar -------------- */
+
+#sidebar{
+    position: fixed;
+    top: 0px;
+    left: -100vw;
+    opacity: 0;
+    z-index: 12;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--always-white);
+}
+
+
+#sidebar a{
+    font-size: 20px;
+    color: var(--background-color);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px auto;
+    transition: all 0.5s;
+}
+
+#sidebar a:hover{
+    color: var(--pri-color2);
+}
+
+#sidebar .cancel {
+	font-size: 30px;
+	font-weight: 900;
+	transition: all 0.5s ease-out;
+	border-radius: 50px;
+	padding: 10px 25px;
+	width: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#sidebar .cancel:hover{
+    background-color: rgba(170, 170, 170, 0.595);
+    color: red;
+}
+
+.sidebar-show{
+    opacity: 0;
+    left: -100vw;
+    animation: sidebar-display 1s ease-in-out forwards;
+}
+
+@keyframes sidebar-display {
+    from{
+        opacity: 0;
+        left: -100vw; 
+    }
+    to{
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+
+.sidebar-hide{
+    opacity: 1;
+    left: 0px;
+    animation: sidebar-fade 1s ease-in-out forwards;
+}
+
+@keyframes sidebar-fade {
+    from{
+        opacity: 1;
+        left: 0px; 
+    }
+    to{
+        opacity: 0;
+        left: -100vw;
+    }
+}
+
 
 
 
