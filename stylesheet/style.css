@@ -98,13 +98,15 @@ body
 
 ul
 {
-    padding-left: 43px;
+    /* padding-left: 43px; */
 }
 
 
 h1
 {
     font-size: 2.3rem;
+    text-align: center;
+    margin: 0px 20px;    
 }
 
 
@@ -123,7 +125,7 @@ h1
 {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -141,6 +143,19 @@ h1
     align-items: center;
     justify-content: center;
     margin: 0px 15px;
+}
+
+.navbar #left #ham-icon{
+    display: none;
+    color: white;
+    font-size: 25px;
+    margin: 0px 15px;
+}
+
+.navbar #left #ham-icon:hover{
+    cursor: pointer;
+    outline: none;
+    user-select: none;
 }
 
 
@@ -351,6 +366,126 @@ input:checked + .slider:before
 
 
 
+/* Navbar Media Queries */
+
+@media (max-width: 1118px) {
+    .navbar #right #tabs ul {
+        margin: 0px 0px;
+    }
+
+    .navbar #right ul li {
+        margin: 0px 15px;
+    }
+}
+
+
+@media (max-width: 970px) {
+    
+    .navbar #left #ham-icon {
+        display: inline;
+    }
+    
+    .navbar #tabs{
+        display: none;
+    }
+}
+
+
+
+
+
+/* ------------------ Sidebar -------------- */
+
+#sidebar{
+    position: fixed;
+    top: 0px;
+    left: -100vw;
+    opacity: 0;
+    z-index: 12;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--always-white);
+}
+
+
+#sidebar a{
+    font-size: 20px;
+    color: var(--background-color);
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px auto;
+    transition: all 0.5s;
+}
+
+#sidebar a:hover{
+    color: var(--pri-color2);
+}
+
+#sidebar .cancel {
+	font-size: 30px;
+	font-weight: 900;
+	transition: all 0.5s ease-out;
+	border-radius: 50px;
+	padding: 10px 25px;
+	width: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#sidebar .cancel:hover{
+    background-color: rgba(170, 170, 170, 0.595);
+    color: red;
+}
+
+.sidebar-show{
+    opacity: 0;
+    left: -100vw;
+    overflow-y: hidden;
+    animation: sidebar-display 1s ease-in-out forwards;
+}
+
+@keyframes sidebar-display {
+    from{
+        opacity: 0;
+        left: -100vw; 
+    }
+    to{
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+
+.sidebar-hide{
+    opacity: 1;
+    left: 0px;
+    animation: sidebar-fade 1s ease-in-out forwards;
+}
+
+@keyframes sidebar-fade {
+    from{
+        opacity: 1;
+        left: 0px; 
+    }
+    to{
+        opacity: 0;
+        left: -100vw;
+    }
+}
+
+
+
+
+
 
 /* ----------- Hero Section ------------ */
 
@@ -381,6 +516,24 @@ input:checked + .slider:before
 {
     width: 500px;
 }
+
+
+
+
+/* Media Queries for Hero */
+
+@media (max-width: 650px) {
+    .hero-section{
+        height: 15em;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-section{
+        height: 18em;
+    }
+}
+
 
 
 
@@ -443,7 +596,106 @@ input:checked + .slider:before
     text-align: center;
 }
 
-/* About Tab */
+
+
+/* Media Queries for Intro Section */
+
+@media (max-width: 1279px) {
+    #card1 {
+        bottom: 6em;
+        left: 25em;
+    }
+    
+    #card2 {
+        right: 10em;
+    }
+    
+    #card3{
+        left: 12em;
+    }
+    
+    #card4 {
+        top: 29em;
+        right: 36em;
+    }
+    
+    #card5 {
+        top: -3em;
+        right: -10em;
+    }
+}
+
+
+
+@media (max-width: 1023px) {
+
+    .intro-card img {
+        height: 8em;
+    }
+
+    .intro-card-paragraph {
+        font-size: 14px;
+    }
+
+    #card1 {
+        bottom: 6em;
+        left: 16em;
+    }
+    
+    #card2 {
+        right: 18em;
+    }
+    
+    #card3{
+        left: 1em;
+    }
+    
+    #card4 {
+        top: -3em;
+        right: 2em;
+    }
+    
+    #card5 {
+        top: -3em;
+        right: -2em;
+    }
+}
+
+
+
+
+
+@media (max-width: 882px) {
+
+    .intro-card{
+        position: static;
+        margin: 18px;
+    }
+
+    
+}
+
+
+@media (max-width: 567px) {
+
+    .intro-card{
+        position: static;
+        margin: 18px;
+        width: 28em;
+    }
+
+    .intro-card-paragraph{
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+
+
+/* ----------------- About Tab ---------------- */
 
 #about
 {
