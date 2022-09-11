@@ -52,12 +52,14 @@ const sidebar = document.getElementById("sidebar");
 function showSidebar() {
   sidebar.classList.remove("sidebar-hide");
   sidebar.classList.add("sidebar-show");
+  document.body.style.overflowY = "hidden"
 }
 
 
 function hideSidebar() {
   sidebar.classList.remove("sidebar-show");
   sidebar.classList.add("sidebar-hide");
+  document.body.style.overflowY = "scroll"
 }
 
 
