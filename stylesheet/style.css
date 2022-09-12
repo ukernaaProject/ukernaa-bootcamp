@@ -667,6 +667,10 @@ input:checked + .slider:before
 
 @media (max-width: 882px) {
 
+    .intro{
+        height: fit-content;
+    }
+
     .intro-card{
         position: static;
         margin: 18px;
@@ -909,6 +913,8 @@ input[type=number] {
 
 
 
+
+
 /* ----------- Buy me a coffee banner --------- */
 
 .bmc-banner{
@@ -1064,6 +1070,32 @@ input[type=number] {
     transition: all ease-in-out 0.5s ;
     padding: 3em;
 }
+
+
+
+
+
+
+/* Media Queries for banner */
+
+@media (max-width: 570px) {
+    .tele-card {
+        width: fit-content;
+        margin: 10px;
+    }
+
+    .bmc-card {
+        width: fit-content;
+        margin: 10px;
+    }
+
+    .patreon-card {
+        width: fit-content;
+        margin: 10px;
+    }
+}
+
+
 
 
 
