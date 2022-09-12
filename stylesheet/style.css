@@ -213,7 +213,7 @@ h1
 .navbar #left #logo #brand
 {
     width: 70px;
-    height: 70px;
+    height: 60px;
 }
 
 .navbar #left #brand-text{
@@ -391,6 +391,16 @@ input:checked + .slider:before
 }
 
 
+@media (max-width: 410px) {
+
+    .navbar #left #logo a {
+        font-size: 1.2rem;
+    }
+
+    .navbar #left #logo #brand {
+        width: 50px;
+    }
+}
 
 
 
@@ -740,16 +750,16 @@ input:checked + .slider:before
     height: 80px;
 }
 
-.register-tab
-{
-    background: var(--pri-half-gradient);
-    display: flex;
-    color: #fff;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-bottom: 10px;
+.register-tab {
+	background: var(--pri-half-gradient);
+	display: flex;
+	color: #fff;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding-bottom: 10px;
+	box-shadow: 5px 5px 1px var(--pri-mid-gradient);
 }
 
 .register-header
@@ -781,7 +791,7 @@ input:checked + .slider:before
 }
 
 .register-text {
-	width: 35%;
+	width: 38%;
 	margin: 5px 28px;
 }
 
@@ -817,9 +827,10 @@ input[type=number] {
     padding-top: 0 15px;
 }
 
-.register-tab span
-{
-    font-size: 1.2rem;
+.register-tab span {
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 0px 7px;
 }
 
 .register-tab span a
@@ -835,6 +846,17 @@ input[type=number] {
 }
 
 
+
+
+
+
+/* Register Media Queries */
+
+@media (max-width: 535px) {
+    .register-text {
+        width: 84%;
+    } 
+}
 
 
 
@@ -1133,7 +1155,6 @@ input[type=number] {
     font-size: 1.5rem;
     padding: 0.5rem 3rem 0.5rem 1rem;
     min-height: 3.5rem;
-    line-height: 1.25rem;
     font-weight: 700;
     display: flex;
     align-items: center;
@@ -1176,6 +1197,9 @@ input[type=number] {
     list-style-type: disc;
     padding-left: 23px;
 }
+
+
+
 
 
 
