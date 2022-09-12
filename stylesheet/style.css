@@ -843,7 +843,7 @@ input[type=number] {
 
 
 
-/* ------------- Telegram Channel Banner ------------ */
+/* ------------- Banner Section ------------ */
 
 .telegram-banner{
     margin: 20px auto;
@@ -950,7 +950,7 @@ input[type=number] {
     color: #fff;
     background: #0D0C22;
     border-radius: 15px;
-    padding: 20px;
+    padding: 17px 5em;
     transition: all 0.4s;
     font-family: 'Roboto', sans-serif;
     font-weight: 650;
@@ -1029,7 +1029,7 @@ input[type=number] {
     color: #fff;
     background: #0D0C22;
     border-radius: 15px;
-    padding: 20px;
+    padding: 17px 5em;
     transition: all 0.4s;
     font-family: 'Roboto', sans-serif;
     font-weight: 650;
@@ -1082,16 +1082,16 @@ input[type=number] {
     .tele-card {
         width: fit-content;
         margin: 10px;
+        padding: 20px;
     }
 
     .bmc-card {
-        width: fit-content;
-        margin: 10px;
+        width: 95%;
+        padding: 20px;
     }
 
     .patreon-card {
-        width: fit-content;
-        margin: 10px;
+        width: 95%;
     }
 }
 
