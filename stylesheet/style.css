@@ -96,10 +96,10 @@ body
 }
 
 
-ul
+/* ul
 {
-    /* padding-left: 43px; */
-}
+    padding-left: 43px;
+} */
 
 
 h1
@@ -1220,7 +1220,7 @@ footer
     background: #130047;
     color: #fff;
     border-radius: 50px 50px 0px 0px;
-    padding: 20px 8em;
+    padding: 20px 3em;
     margin-top: 8em;
 }
 
@@ -1248,8 +1248,8 @@ footer
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 30px;
 }
 
@@ -1291,7 +1291,14 @@ footer
     padding-left: 20px;
 }
 
+.footer-body-left .maps{
+    display: flex;
+    flex-direction: column;
+}
 
+.footer-body-left .maps a{
+    margin: 10px;
+}
 
 
 /* Center */
@@ -1359,12 +1366,17 @@ footer
 
 
 /* Right */
+.footer-body-right{
+    width: 30%;
+}
+
 .footer-body-right form
 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    width: 100%;
 }
 
 .footer-body-right form input, .footer-body-right form textarea {
@@ -1373,7 +1385,7 @@ footer
 	border-radius: 8px;
 	margin: 10px 0px;
 	resize: none;
-	width: 80%;
+	width: 100%;
 }
 
 .footer-body-right form button{
@@ -1404,6 +1416,7 @@ footer
     font-family: 'Poppins', sans-serif;
 }
 
+
 textarea
 {
     font-family: 'Poppins', sans-serif;
@@ -1413,6 +1426,13 @@ textarea
 textarea:focus
 {
     font-style: italic;
+}
+
+
+
+
+.footer-body-left, .footer-body-center, .footer-body-right{
+    margin: 20px 3em;
 }
 
 
@@ -1428,4 +1448,43 @@ textarea:focus
     align-items: center;
     background: #130047;
     padding: 15px;
+}
+
+
+
+
+
+
+
+
+/* Footer Media Queries */
+
+@media (max-width: 1350px) {
+
+    .footer-body-right{
+        width: 50%;
+    }
+}
+
+@media (max-width: 870px) {
+
+    .footer-body-left .maps{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer-body-right{
+        width: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    footer{
+        padding: 20px 1em;
+    }
+
+    .footer-body-left, .footer-body-center, .footer-body-right{
+        margin: 20px 0px;
+    }
 }
