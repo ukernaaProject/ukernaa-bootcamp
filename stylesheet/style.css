@@ -715,12 +715,36 @@ input:checked + .slider:before
 {
     padding: 13px;
     background: var(--pri-half-grad-reverse);
+    color: white;
 }
 
 .about
 {
     color: #fff;
     margin: 1.6rem;
+}
+
+.about .bc-desc {
+    font-size: 18px;
+    margin: 2em 10em;
+}
+
+.about ul{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.about ul li{
+    border-left: 1px solid var(--pri-color2);
+    padding: 10px;
+}
+.about ul li:nth-child(1){
+    border-left: none;
 }
 
 .about h1
@@ -738,6 +762,256 @@ input:checked + .slider:before
     padding-left: 23px;
 
 }
+
+
+
+/* Fusion Tech Club */
+
+.fusion-tech-club{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1em 5em;
+}
+
+.fusion-tech-club img{
+    width: 10em;
+}
+
+.fusion-tech-club p {
+    padding: 1em 5em;
+    font-size: 20px;
+}
+
+.faq
+{
+    width: 90%;
+    max-width: 1000px;
+    margin: 2em auto;
+}
+
+.faq h1
+{
+    text-align: center;
+}
+
+
+.faq-item {
+    margin: 1rem 0;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    width: 60%;
+    margin: 24px auto;
+    background: white;
+    padding: 7px 10px;
+    color: black;
+}
+
+.faq-item-header
+{
+    font-size: 1.5rem;
+    padding: 15px 3rem;
+    min-height: 3.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.faq-item-header::after
+{
+    content: '\002B';
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.faq-item-header.active::after
+{
+    /* content: '\2212'; */
+    transform: rotate(45deg);
+    color: var(--sec-color1);
+}
+
+.faq-item-header:hover{
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.faq-item-body
+{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq-item-body-content
+{
+    border-top: 3px solid var(--pri-color1);
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.faq-item-body-content ul
+{
+    list-style-type: disc;
+    padding-left: 23px;
+}
+
+
+
+
+/* About Area 1 */
+
+.about-area1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+.about-area1 .area1-left img{
+    width: 20em;
+}
+
+.area1-right{
+    width: 50%;
+
+}
+
+.about-area1 ul{
+    list-style: none;
+}
+
+.area1-right li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.area1-right .tick{
+    color: var(--sec-color2);
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 2px solid var(--sec-color2);
+    margin: 0px 10px;
+}
+
+
+
+/* About Area 2 */
+
+.about-area2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    margin: 50px 0px 70px 0px;
+}
+
+.about-area2 .area2-right img{
+    width: 20em;
+}
+
+.area2-left{
+    width: 50%;
+
+}
+
+.about-area2 ul{
+    list-style: none;
+}
+
+.area2-left li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.area2-left .tick{
+    color: var(--sec-color2);
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 2px solid var(--sec-color2);
+    margin: 0px 10px;
+}
+
+
+
+
+
+
+
+/* About Media Queries */
+
+@media (max-width: 1000px) {
+    .about .bc-desc {
+        margin: 2em 2em;
+    }
+
+    .fusion-tech-club{
+        margin: 1em;
+    }
+
+    .fusion-tech-club p {
+        padding: 1em 0px;
+        font-size: 20px;
+    }
+
+    .about-area1 {
+        margin: 20px 0px;
+    }
+
+    .about-area2 {
+        margin: 10px 0px 70px 0px;
+    }
+
+    .area1-right li, .area2-left li{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .area1-right, .area2-left {
+        width: 98%;
+    }
+
+    .faq-item{
+        width: 98%;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .about .bc-desc {
+        font-size: 15px;
+        margin: 2em 0px;
+    }
+
+    .fusion-tech-club p{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .faq-item-header{
+        font-size: 17px;
+        padding: 15px 3rem 15px 10px;
+    }
+}
+
+
+
+
 
 /* --------- Registration Tab --------- */
 
@@ -1144,7 +1418,6 @@ input[type=number] {
 
 .syllabus-item
 {
-    background: linear-gradient(to right,#e4a27926,#ed7d9021,#13004717);
     margin: 1rem 0;
     border-radius: 0.5rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -1153,7 +1426,7 @@ input[type=number] {
 .syllabus-item-header
 {
     font-size: 1.5rem;
-    padding: 0.5rem 3rem 0.5rem 1rem;
+    padding: 15px 2rem;
     min-height: 3.5rem;
     font-weight: 700;
     display: flex;
@@ -1176,6 +1449,12 @@ input[type=number] {
     /* content: '\2212'; */
     transform: rotate(45deg);
     color: var(--sec-color1);
+}
+
+.syllabus-item-header:hover{
+    outline: none;
+    user-select: none;
+    cursor: pointer;
 }
 
 .syllabus-item-body
